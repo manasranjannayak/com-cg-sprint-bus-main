@@ -5,20 +5,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.cg.sprint.bus.model.FeedBack;
+import com.cg.sprint.bus.model.Route;
 
 @SpringBootTest
-public class FeedbackServiceTests {
-	
+public class RouteServiceTests {
 
 	@Autowired
-	private FeedBackService feedbackService;
+	private  RouteService routeService;
 	
-	public void testDeletefeedback() {
-		FeedBack actual = feedbackService.deleteFeedBack(1);
-		FeedBack expected = feedbackService.deleteFeedBack(1);
+	public void testDeleteRoute() {
+		Route actual = routeService.deleteRoute(1);
+	    Route expected = routeService.deleteRoute(1);
 		
 		assertEquals(actual, expected);
 	}
-
 }
